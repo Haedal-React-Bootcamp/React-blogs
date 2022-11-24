@@ -1,0 +1,13 @@
+create database comments_db character set utf8;
+
+use mysql;
+
+create user 'forCommentDB'@localhost identified by '1234'
+
+use comments_db
+
+grant all privileges on comments_db.* to 'forCommentDB'@'localhost';
+
+flush privileges;
+
+show grants for forCommentDB@'localhost';
